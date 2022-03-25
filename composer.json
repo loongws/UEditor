@@ -21,17 +21,17 @@
         "loongws/laravel-ueditor": "~1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "^9.5.18"
     },
     "autoload": {
         "psr-4": {
-            "Overtrue\\Ueditor\\": "src/"
+            "Overtrue\\UEditor\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Overtrue\\Ueditor\\UeditorServiceProvider"
+                "Overtrue\\UEditor\\UEditorServiceProvider"
             ]
         }
     }
