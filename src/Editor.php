@@ -1,9 +1,9 @@
 <?php
 
-namespace Codingyu\Ueditor;
+namespace Overtrue\UEditor;
 
 use Encore\Admin\Form\Field;
-
+use Illuminate\Support\Str;
 class Editor extends Field
 {
     protected $view = 'laravel-admin-ueditor::editor';
@@ -17,9 +17,9 @@ class Editor extends Field
     {
         $name = $this->formatName($this->column);
         
-        $jsId = \Illuminate\Support\Str::studly(\Illuminate\Support\Str::slug($this->id));
+        $jsId = Str::studly(Str::slug($this->id));
 
-        $config = Ueditor::config('config', []);
+        $config = UEditor::config('config', []);
 
         $config = json_encode(array_merge($config, $this->options));
 

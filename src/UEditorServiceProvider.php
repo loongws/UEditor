@@ -1,19 +1,19 @@
 <?php
 
-namespace Codingyu\Ueditor;
+namespace Overtrue\UEditor;
 
 use Encore\Admin\Form;
 use Encore\Admin\Admin;
 use Illuminate\Support\ServiceProvider;
 
-class UeditorServiceProvider extends ServiceProvider
+class UEditorServiceProvider extends ServiceProvider
 {
     /**
      * {@inheritdoc}
      */
-    public function boot(Ueditor $extension)
+    public function boot(UEditor $extension)
     {
-        if (!Ueditor::boot()) {
+        if (!UEditor::boot()) {
             return;
         }
 
@@ -22,7 +22,7 @@ class UeditorServiceProvider extends ServiceProvider
         }
 
         Admin::booting(function () {
-            Form::extend(Ueditor::config('field_type', 'UEditor'), Editor::class);
+            Form::extend(UEditor::config('field_type', 'UEditor'), Editor::class);
         });
     }
 }

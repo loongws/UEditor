@@ -1,19 +1,22 @@
 UEditor extension for laravel-admin
 ======
 
-这是一个 `laravel-admin` 扩展，用来将 [UEditor](https://ueditor.baidu.com/website/index.html) 集成进 `laravel-admin` 的表单中，~~依赖 [overtrue/laravel-ueditor](https://github.com/overtrue/laravel-ueditor)~~ 依赖 [codingyu/laravel-ueditor](https://github.com/codingyu/laravel-ueditor)
+这是一个 `laravel-admin` 扩展，用来将 [UEditor](https://ueditor.baidu.com/website/index.html) 集成进 `laravel-admin` 的表单中，
+
+~~依赖 [overtrue/laravel-ueditor](https://github.com/overtrue/laravel-ueditor)~~ 
+
+~~依赖 [codingyu/laravel-ueditor](https://github.com/codingyu/laravel-ueditor)~~ 
+
+依赖 [loongws/laravel-ueditor](https://gitee.com/longyunrui/laravel-ueditor)
 
 ## 安装
 
 ```bash
-composer require codingyu/ueditor
+composer require loongws/ueditor
 ```
 
 发布资源
 ```bash
-// V3.*
-php artisan vendor:publish --provider=Codingyu\LaravelUEditor\UEditorServiceProvider
-// V2.*
 php artisan vendor:publish --provider=Overtrue\LaravelUEditor\UEditorServiceProvider
 ```
 
@@ -39,11 +42,17 @@ php artisan vendor:publish --provider=Overtrue\LaravelUEditor\UEditorServiceProv
 
 ```
 
-后端配置 `config/ueditor.php`，参考 ~~[overtrue/laravel-ueditor](https://github.com/overtrue/laravel-ueditor)~~ [codingyu/laravel-ueditor](https://github.com/codingyu/laravel-ueditor)
+后端配置 `config/ueditor.php`，参考
+
+~~[overtrue/laravel-ueditor](https://github.com/overtrue/laravel-ueditor)~~
+
+~~[codingyu/laravel-ueditor](https://github.com/codingyu/laravel-ueditor)~~
+
+[loongws/laravel-ueditor](https://gitee.com/longyunrui/laravel-ueditor)
 
 ## 使用
 
-### 2.* | 3.*
+
 组件名可配置，默认 `UEditor`
 
 
@@ -57,19 +66,11 @@ $form->UEditor('content')->options(['initialFrameHeight' => 800]);
 // $form->xxxEditor('content');
 ```
 
-### 1.*
-在form表单中使用它：
-```php
-$form->editor('content');
-// options 中参数会覆盖 extensions.ueditor.config 中参数
-$form->editor('content')->options(['initialFrameHeight' => 800]);
 
-// 升级2.* 后，不改代码兼容 1.*：可以配置  extensions.ueditor.field_type 为 editor
-```
-
-## 大感谢
+## 感谢
 - [laravel-admin](https://github.com/z-song/laravel-admin)
 - [overtrue/laravel-ueditor](https://github.com/overtrue/laravel-ueditor)
+- [codingyu/laravel-ueditor](https://github.com/codingyu/laravel-ueditor)
 
 License
 ------------

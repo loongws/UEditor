@@ -1,10 +1,10 @@
 <?php
 
-namespace Codingyu\Ueditor;
+namespace Overtrue\UEditor;
 
 use Encore\Admin\Extension;
 
-class Ueditor extends Extension
+class UEditor extends Extension
 {
     public $name = 'ueditor';
 
